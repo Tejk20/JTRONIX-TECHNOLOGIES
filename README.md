@@ -324,3 +324,22 @@ DELETE /employees/4
 - The frontend calls the API for every operation and refreshes the list after a
   successful add or status change, so the UI always reflects the backend state.
 - API errors are surfaced to the user through toast notifications.
+
+---
+
+## Deployment
+
+The app ships with a [`render.yaml`](render.yaml) blueprint and deploys to
+[Render](https://render.com) as a single Python web service (FastAPI serves both
+the API and the frontend).
+
+- **Repository:** https://github.com/Tejk20/JTRONIX-TECHNOLOGIES
+- **Build command:** `pip install -r requirements.txt`
+- **Start command:** `uvicorn backend.main:app --host 0.0.0.0 --port $PORT`
+
+To deploy your own copy: push the repo to GitHub, then in the Render dashboard
+choose **New → Blueprint** and select the repository. Render reads `render.yaml`
+and provisions the service automatically.
+
+> On Render's free plan the service sleeps after inactivity, so the first
+> request after a while may take a few seconds to wake up.
