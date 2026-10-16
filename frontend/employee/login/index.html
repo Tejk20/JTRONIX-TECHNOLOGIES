@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Employee Sign In · JTRONIX</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="/css/styles.css" />
+  <link
+    rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%2316a34a'/><text x='50' y='68' font-size='56' text-anchor='middle' fill='white' font-family='Arial'>J</text></svg>"
+  />
+</head>
+<body class="auth-page" data-role="employee" data-accent="green">
+  <main class="auth-card">
+    <a class="auth-back" href="/">
+      <svg viewBox="0 0 24 24" class="icon"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
+      Back
+    </a>
+
+    <div class="auth-brand">
+      <div class="brand-mark brand-mark--green">J</div>
+      <div>
+        <span class="auth-brand__name">JTRONIX</span>
+        <span class="auth-brand__role">Employee Portal</span>
+      </div>
+    </div>
+
+    <div class="auth-heading">
+      <h1>Employee Sign In</h1>
+      <p>Sign in to view the employee directory.</p>
+    </div>
+
+    <form id="loginForm" novalidate>
+      <div class="field">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" autocomplete="username" placeholder="employee" />
+      </div>
+
+      <div class="field">
+        <label for="password">Password</label>
+        <div class="password-wrap">
+          <input type="password" id="password" name="password" autocomplete="current-password" placeholder="••••••••" />
+          <button type="button" class="password-toggle" id="passwordToggle" aria-label="Show password">Show</button>
+        </div>
+      </div>
+
+      <p class="auth-error" id="authError" hidden></p>
+
+      <button type="submit" class="btn btn--primary btn--block" id="loginBtn">
+        <span class="btn-label">Sign In</span>
+      </button>
+    </form>
+
+    <p class="auth-hint">
+      Demo credentials — <strong>employee</strong> / <strong>employee123</strong>
+    </p>
+  </main>
+
+  <script src="/js/session.js"></script>
+  <script src="/js/login.js"></script>
+</body>
+</html>
