@@ -10,6 +10,8 @@ Internship Assessment.
 The whole app runs locally as a single project — FastAPI serves both the REST
 API and the frontend dashboard.
 
+**Live demo:** https://jtronex-employee-management.onrender.com
+
 ---
 
 ## Demo Accounts
